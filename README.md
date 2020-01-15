@@ -1,6 +1,6 @@
 # fitbit
 # Software/Hardware Involved
-# Android Emulator configured using Android Studio (AVD Manager)
+Android Emulator configured using Android Studio (AVD Manager)
 Robot Framework
 Appium library of the Robot framework ( install via command : pip install robotframework-appiumlibrary)
 Python 3.8.1
