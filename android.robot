@@ -15,15 +15,15 @@ ${BOOTSTRAP_PORT}         4724
 ${PLATFORM}               Android
 ${VERSION}                7.0
 ${UDID}                   emulator-5554
-${ALIAS}				  Pixel_3_API_24
-${Loginlocator}		        id=com.fitbit.FitbitMobile:id/btn_log_in
+${ALIAS}		  Pixel_3_API_24
+${Loginlocator}		    id=com.fitbit.FitbitMobile:id/btn_log_in
 ${emailInputlocator}        id=com.fitbit.FitbitMobile:id/login_email
 ${passwordinputlocator}     id=com.fitbit.FitbitMobile:id/login_password
-${LoginButtonlocator}		id=com.fitbit.FitbitMobile:id/login_button
-${OkButtonlocator}		    id=android:id/button1
-${VALID_USER}				test.user3457@gmail.com
-${VALID_PASSWORD}			Password@123
-${ErrorLocator}				id=android:id/message
+${LoginButtonlocator}       id=com.fitbit.FitbitMobile:id/login_button
+${OkButtonlocator}          id=android:id/button1
+${VALID_USER}		    test.user3457@gmail.com
+${VALID_PASSWORD}	    Password@123
+${ErrorLocator}		    id=android:id/message
 
 *** Keywords ***
 
@@ -32,6 +32,7 @@ Login with Valid or Invalid Credentials
   Input Username	${user_name}
   Input Password  ${password}
   Submit Credentials
+  Capture Page Screenshot
   Click Element		${OkButtonlocator}
   
 Submit Credentials
@@ -46,7 +47,7 @@ Input Username
 
 Input Password
   [Arguments]		${password}
-  Clear Text        ${passwordinputlocator}
+  Clear Text            ${passwordinputlocator}
   Input Text		${passwordinputlocator}  ${password}
   Capture Page Screenshot
   
@@ -61,12 +62,12 @@ Spawn Appium Server and Application
 
 *** Test Cases ***				USER_NAME		PASSWORD
 Invalid Username				invalid			$(VALID_PASSWORD)
-Invalid Password				${VALID_USER}	invalid
-Invalid Username and Password	invalid			testpassword
+Invalid Password				${VALID_USER}	        invalid
+Invalid Username and Password	invalid			                testpassword
 Empty Username					${EMPTY}		$(VALID_PASSWORD)
-Empty Password					${VALID_USER}	${EMPTY}
-Empty Username and Password		${EMPTY}		${EMPTY}
-Correct Username and Password	${VALID_USER}   $(VALID_PASSWORD)
+Empty Password					${VALID_USER}	        ${EMPTY}
+Empty Username and Password		        ${EMPTY}		${EMPTY}
+Correct Username and Password	                ${VALID_USER}           $(VALID_PASSWORD)
 
 
 	
