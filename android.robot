@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation 		  Data Driven Test
+Documentation 		  Data Driven Test for FitBit App
 Library               AppiumLibrary       15      run_on_failure=Log Source
 Library               Process
 Suite Setup           Spawn Appium Server and Application
