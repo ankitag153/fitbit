@@ -1,10 +1,10 @@
 # fitbit
 # Software/Hardware Involved
-Android Emulator configured using Android Studio (AVD Manager)
-Robot Framework
-Appium library of the Robot framework ( install via command : pip install robotframework-appiumlibrary)
-Python 3.8.1
-Appium 1.15.1
+1) Android Emulator configured using Android Studio (AVD Manager)
+2) Robot Framework
+3) Appium library of the Robot framework ( install via command : pip install robotframework-appiumlibrary)
+4) Python 3.8.1
+5) Appium 1.15.1
 
 Pre-requisite :
 1) Open Android Studio and start the device from AVD Manager
